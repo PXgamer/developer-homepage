@@ -98,6 +98,10 @@
             @if (env('NPM_USER'))
                 <a href="https://npmjs.com/~{{ env('NPM_USER') }}" target="_blank">NPM</a>
             @endif
+
+            @if (env('RUBY_GEMS_USER'))
+                <a href="https://rubygems.org/profiles/{{ env('RUBY_GEMS_USER') }}" target="_blank">RubyGems</a>
+            @endif
         </div>
     </div>
 </div>
