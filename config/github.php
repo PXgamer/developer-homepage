@@ -41,7 +41,7 @@ return [
     'connections' => [
 
         'main' => [
-            'token'      => env('GITHUB_TOKEN'),
+            'token'      => env('GITHUB_PAT_TOKEN'),
             'method'     => 'token',
             // 'backoff'    => false,
             // 'cache'      => false,
