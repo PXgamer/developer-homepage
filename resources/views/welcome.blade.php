@@ -35,7 +35,7 @@
 
         .content {
             text-align: center;
-            margin-top: -50em;
+            margin-bottom: 15em;
         }
 
         .title {
@@ -55,6 +55,16 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        .avatar img {
+            height: 15em;
+        }
+
+        .img-rounded {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -64,9 +74,30 @@
             {{ env('APP_NAME') }}
         </div>
 
+        <div class="m-b-md avatar">
+            <img class="img-rounded" src="{{ $me['avatar_url'] }}"/>
+        </div>
+
+        <div class="m-b-md">
+            <strong>{{ $me['bio'] }}</strong>
+            <span>|</span>
+            <strong>{{ $me['location'] }}</strong>
+            <span>|</span>
+            <strong>{{ $me['public_repos'] }} repos</strong>
+        </div>
+
         <div class="links">
-            <a href="https://github.com/{{ env('APP_NAME') }}" target="_blank">GitHub</a>
-            <a href="https://packagist.org/packages/{{ env('APP_NAME') }}" target="_blank">Packagist</a>
+            @if (env('GITHUB_USER'))
+                <a href="https://github.com/{{ env('GITHUB_USER') }}" target="_blank">GitHub</a>
+            @endif
+
+            @if (env('PACKAGIST_USER'))
+                <a href="https://packagist.org/packages/{{ env('PACKAGIST_USER') }}" target="_blank">Packagist</a>
+            @endif
+
+            @if (env('NPM_USER'))
+                <a href="https://npmjs.com/~{{ env('NPM_USER') }}" target="_blank">NPM</a>
+            @endif
         </div>
     </div>
 </div>
