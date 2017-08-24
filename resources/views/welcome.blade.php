@@ -102,6 +102,10 @@
             @if (env('RUBY_GEMS_USER'))
                 <a href="https://rubygems.org/profiles/{{ env('RUBY_GEMS_USER') }}" target="_blank">RubyGems</a>
             @endif
+
+            @if (env('KEYBASE_USER'))
+                <a href="https://keybase.io/{{ env('KEYBASE_USER') }}" target="_blank">Keybase.io</a>
+            @endif
         </div>
     </div>
 </div>
