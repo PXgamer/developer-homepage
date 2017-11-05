@@ -49,6 +49,10 @@
             @if (env('KEYBASE_USER'))
                 <a href="https://keybase.io/{{ env('KEYBASE_USER') }}" target="_blank">Keybase.io</a>
             @endif
+
+            @if (env('LAUNCHPAD_USER'))
+                <a href="https://launchpad.net/~{{ env('LAUNCHPAD_USER') }}" target="_blank">Launchpad</a>
+            @endif
         </div>
     </div>
 </div>
