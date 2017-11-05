@@ -22,11 +22,21 @@
         </div>
 
         <div class="m-b-md">
-            <strong>{{ $me['bio'] }}</strong>
-            <span>|</span>
-            <strong>{{ $me['location'] }}</strong>
-            <span>|</span>
-            <strong>{{ $me['public_repos'] }} repos</strong>
+            @if ($me['bio'])
+                <strong>{{ $me['bio'] }}</strong>
+                @if ($me['public_repos'] || $me['location'])
+                    <span> | </span>
+                @endif
+            @endif
+            @if ($me['location'])
+                <strong>{{ $me['location'] }}</strong>
+            @endif
+            @if ($me['public_repos'])
+                @if ($me['bio'] || $me['location'])
+                    <span> | </span>
+                @endif
+                <strong>{{ $me['public_repos'] }} repos</strong>
+            @endif
         </div>
 
         <div class="links">
