@@ -44,6 +44,10 @@
                 <a href="https://github.com/{{ env('GITHUB_USER') }}" target="_blank">GitHub</a>
             @endif
 
+            @if (env('GITLAB_USER'))
+                <a href="https://gitlab.com/{{ env('GITLAB_USER') }}" target="_blank">GitLab</a>
+            @endif
+
             @if (env('PACKAGIST_USER'))
                 <a href="https://packagist.org/packages/{{ env('PACKAGIST_USER') }}" target="_blank">Packagist</a>
             @endif
