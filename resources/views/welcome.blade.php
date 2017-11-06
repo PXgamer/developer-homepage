@@ -71,7 +71,7 @@
             @endif
 
             @if (env('CHOCOLATEY_USER'))
-                <a href="https://launchpad.net/~{{ env('CHOCOLATEY_USER') }}" target="_blank">Chocolatey</a>
+                <a href="https://chocolatey.org/profiles/{{ env('CHOCOLATEY_USER') }}" target="_blank">Chocolatey</a>
             @endif
         </div>
     </div>
