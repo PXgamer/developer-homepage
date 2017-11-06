@@ -25,3 +25,4 @@ PAT tokens for GitHub can be generated here: https://github.com/settings/tokens
 - [Keybase.io](https://keybase.io)
 - [Launchpad.net](https://launchpad.net)
 - [Chocolatey.org](https://chocolatey.org)
+- [Stack Overflow](https://stackoverflow.com)
