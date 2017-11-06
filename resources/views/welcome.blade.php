@@ -73,6 +73,10 @@
             @if (env('CHOCOLATEY_USER'))
                 <a href="https://chocolatey.org/profiles/{{ env('CHOCOLATEY_USER') }}" target="_blank">Chocolatey</a>
             @endif
+
+            @if (env('STACKOVERFLOW_USER'))
+                <a href="https://stackoverflow.com/users/{{ env('STACKOVERFLOW_USER') }}" target="_blank">StackOverflow</a>
+            @endif
         </div>
     </div>
 </div>
