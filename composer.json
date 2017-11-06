@@ -1,6 +1,6 @@
 {
     "name": "pxgamer/developer-homepage",
-    "description": "Personal homepage for Developers created with Laravel.",
+    "description": "Personal homepage for developers created with Laravel.",
     "license": "MIT",
     "type": "project",
     "require": {

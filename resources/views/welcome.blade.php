@@ -11,15 +11,17 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="flex-center position-ref full-height">
+<div class="flex-center position-ref">
     <div class="content">
         <div class="title m-b-md">
             {{ env('APP_NAME') }}
         </div>
 
-        <div class="m-b-md avatar">
-            <img class="img-rounded" src="{{ $me['avatar_url'] }}"/>
-        </div>
+        @if ($me['avatar_url'])
+            <div class="m-b-md avatar">
+                <img class="img-rounded" src="{{ $me['avatar_url'] }}"/>
+            </div>
+        @endif
 
         <div class="m-b-md">
             @if ($me['bio'])
@@ -66,6 +68,14 @@
 
             @if (env('LAUNCHPAD_USER'))
                 <a href="https://launchpad.net/~{{ env('LAUNCHPAD_USER') }}" target="_blank">Launchpad</a>
+            @endif
+
+            @if (env('CHOCOLATEY_USER'))
+                <a href="https://chocolatey.org/profiles/{{ env('CHOCOLATEY_USER') }}" target="_blank">Chocolatey</a>
+            @endif
+
+            @if (env('STACKOVERFLOW_USER'))
+                <a href="https://stackoverflow.com/users/{{ env('STACKOVERFLOW_USER') }}" target="_blank">StackOverflow</a>
             @endif
         </div>
     </div>
