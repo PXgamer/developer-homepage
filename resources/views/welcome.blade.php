@@ -17,9 +17,11 @@
             {{ env('APP_NAME') }}
         </div>
 
-        <div class="m-b-md avatar">
-            <img class="img-rounded" src="{{ $me['avatar_url'] }}"/>
-        </div>
+        @if ($me['avatar_url'])
+            <div class="m-b-md avatar">
+                <img class="img-rounded" src="{{ $me['avatar_url'] }}"/>
+            </div>
+        @endif
 
         <div class="m-b-md">
             @if ($me['bio'])
@@ -66,6 +68,10 @@
 
             @if (env('LAUNCHPAD_USER'))
                 <a href="https://launchpad.net/~{{ env('LAUNCHPAD_USER') }}" target="_blank">Launchpad</a>
+            @endif
+
+            @if (env('CHOCOLATEY_USER'))
+                <a href="https://launchpad.net/~{{ env('CHOCOLATEY_USER') }}" target="_blank">Chocolatey</a>
             @endif
         </div>
     </div>
